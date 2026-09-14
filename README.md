@@ -9,3 +9,8 @@ El presente projecto introduce un **Filtro Topológico utilizando Árboles de Ex
 1. Pesos Iguales ($1/N$)
 2. Hierarchical Risk Parity Estándar (HRP)
 3. MST-Filtered HRP (Nuestra contribución topológica)
+
+Se utilizan 40 acciones de alta liquidez (S&P 100), con los precios de cierre desde 1-1-2018 hasta 9-1-2026. El filtro topológico obtiene el MST con el algoritmo Kruskal y la agrupación jerárquica del HRP utiliza las distancias del MST y agrupación de Ward. Para realizar el backtesting, se adopta una evaluación Walk-Forward. Se toman 252 datos para calcular los pesos óptimos según las 3 estrategias, luego se mantiene un portafolio por 21 días después de los cuales se rebalancea el portafolio con los últimos 252 datos (incluyendo los últimos 21 días y eliminando los 21 días más antiguos). Esto se repite hasta completar la muestra. 
+
+
+
